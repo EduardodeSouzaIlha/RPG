@@ -7,3 +7,6 @@ $('span:last').click(()=>{
     })
 })
 
+$('span:first').click(()=>{
+ $('p').hide(5000).show(5000).fadeOut(5000).css("color","red")
+})
