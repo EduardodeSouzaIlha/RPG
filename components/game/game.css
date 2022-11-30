@@ -1,6 +1,6 @@
 #game{
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,5 +12,71 @@
     margin-top: 10px;
     height: 400px;
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    
 }
+#field-1{
 
+    width: 50%;
+    background-color: rgb(20, 20, 20);
+    border-right: 1px solid rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#field-2{
+    width: 50%;
+    background-color: rgb(20, 20, 20);
+    border-left: 1px solid rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#field-1 > p {
+    color: aliceblue;
+
+    
+}
+#field-2 > span {
+    color: aliceblue;
+}
+#character{
+    margin-top: 10px;
+    width: 90%;
+    background-color: rgb(0, 0, 0);
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.button{
+    padding: 3px;
+    border-radius: 20px;
+    display: inline-block;
+}
+.box-info{
+    border: 1px dashed white;
+    margin: 2%;
+    padding: 5px;
+}
+h3{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.img-character{
+    width: 200px;
+    height: 200px;
+}
+p{
+    color: white;
+}
+#character2{
+    display: none;
+}
+#character3{
+    display: none;
+}
