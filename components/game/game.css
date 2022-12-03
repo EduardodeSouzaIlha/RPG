@@ -34,7 +34,7 @@
     align-items: center;
     justify-content: center;
 }
-#field-1 > p {
+#field-1 > p{
     color: aliceblue;
 
     
@@ -71,7 +71,7 @@ h3{
     width: 200px;
     height: 200px;
 }
-p{
+li{
     color: white;
 }
 #character2{
@@ -79,4 +79,33 @@ p{
 }
 #character3{
     display: none;
+}
+
+
+
+/*
+Transition
+*/
+.transitionRemove{
+    display: none;
+}
+
+.transitionShow{
+    display: block;
+    position: absolute;
+    align-items: center;
+    animation-name: transition;
+    animation-duration: 4s;
+    z-index: 10;
+}
+@keyframes transition{
+    0% {
+        width: 100px;
+    }
+    50% {
+        width: 500px;
+    }
+    100% {
+        width: 0px;
+    }
 }

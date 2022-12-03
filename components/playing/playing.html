@@ -1,6 +1,31 @@
 
-<div id="battle">
-    <img src="img/background2.jpg" alt="" id="background1">
-    <div id="player-game"></div>
+<div>
+    <div id="battle" >
+        <button id="shop"><img src="img/icon.png" alt=""></button>
+        <div id="background">
+            <img id="clouds" src="/img/clouds.png"/>
+            <div id="info-players">
+                
+                <div id="life-player"></div>
+                
+                <div id="gold"><div id="coin"></div><img src="/img/coin.png" class="coin" alt="coin"></div>
+                
+                <div id="life-enemy"></div>
+            </div>
+            <div id="player-game"></div>
+            <div>
+                <div id="enemy-img"></div>
+                <div id="attack"></div>
+            </div>
+            
+        </div>
+    </div>
+    <div id="display-shop">
+        <ul id="list-shop">
+            <li>40 <img src="/img/coin.png" class="coin" alt="coin"><button id="moreLife">+40 Life</button></li>
+            <li>60 <img src="/img/coin.png" class="coin" alt="coin"><button>Regenerate life</button> </li>
+            <li>40 <img src="/img/coin.png" class="coin" alt="coin"><button>+15 Atack</button></li>
+        </ul>
+    </div>
 </div>
 <script type="module" src="components/playing/playing.js"></script>

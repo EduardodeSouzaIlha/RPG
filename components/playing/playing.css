@@ -2,7 +2,190 @@
   display: flex;
   justify-content: center;
 }
-#background1{
-    width: 100%;
-    height: 100%;
+#battle{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+/*BACKGROUND*/
+#background{
+  overflow: hidden;
+ 
+}
+.background1{
+  background-image: url('/img/background.jpg');
+  width: 600px;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.background2{
+  background-image: url('/img/background1.jpg');
+  width: 600px;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.background3{
+  background-image: url('/img/background2.jpg');
+  width: 600px;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#clouds{
+  position: absolute;
+  width: 200px;
+  z-index: 0;
+  animation: clouds 20s linear infinite;
+  left: 780px;
+  top: -20px;
+}
+@keyframes clouds {
+  0%{
+    left: 1000px;
+  }
+  50%{
+    left: 300px;
+  }
+  100%{
+    left: -300px;
+  }
+}
+/*INFO-PLAYERS*/
+#info-players{
+  position: relative;
+  width: 98%;
+  margin-left: 1%;
+  height: 40px;
+  top: 10px;
+  background-color:rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+#life-player{
+ height: 20px;
+ width: 50px;
+ background-color: rgb(0, 0, 0);
+ color: white;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+#gold{
+  height: 18px;
+  width: 20px;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: row;
+  color: white;
+}
+#life-enemy{
+  height: 20px;
+  width: 50px;
+  color: white;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+ align-items: center;
+}
+/*ENEMY*/
+
+.enemy{
+  position: relative;
+  width: 150px;
+  bottom: -10px;
+  left: 450px;
+}
+#attack > img{
+  position: relative;
+  top: -80px;
+  right: -400px;
+  width: 40px;
+  
+}
+.attack-move{
+  animation: 2s attack-animation linear infinite;;
+
+}
+@keyframes attack-animation{
+  0%{
+    right: -600px;
+  }
+  50%{
+    right: -300px;
+  }
+  100%{
+    right: 100px;
+  }
+
+
+}
+  
+
+
+
+/*PLAYER*/
+#player-game{
+  position: relative;
+  top: 0px;
+  
+}
+#player-game > img{
+  width: 150px;
+  height: 150px;
+  position: relative;
+  top: 180px;
+}
+.player-jump{
+  animation: 1s jump ;
+}
+@keyframes jump{
+  0%{
+    top: 190px;
+  }
+  50%{
+    top: 50px;
+  }
+  100%{
+    top: 180px;
+  }
+}
+
+/*SHOP*/
+
+#shop{
+ 
+background: linear-gradient(90deg, rgb(102, 100, 100)0%, rgba(90,90,156,1) 45%, rgba(2,0,36,1) 100%);
+  border: 0;
+}
+#shop:hover{
+  background: linear-gradient(90deg, rgba(2,0,36,1)0%, rgba(90,90,156,1) 45%,  rgb(71, 71, 71)100%);
+}
+#shop > img{
+   width: 40px;
+}
+#display-shop{
+  
+  display: none;
+  width: 100%;
+  height: 200px;
+  background-color: rgb(25, 25, 26);
+}
+#list-shop{
+  list-style: none;
+  text-align: center;
+  padding-top: 40px;
+}
+#list-shop > li{
+
+  margin-bottom: 40px;
+}
+.coin{
+  width: 10px;
+  margin-right: 4px ;
+  margin-left: -2px ;
 }

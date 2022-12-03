@@ -25,13 +25,18 @@ export let player = character1
         
     })
 
-$('#next').click(()=>{
+// $('#next').click(()=>{
 
     $('#screen').children().remove()
-    $.get("components/playing/playing.html", function(res){
-        $('#screen').html(res) 
-    })
-})
+ 
+    // $('#transition').addClass('transitionShow')
+    // setTimeout(()=>{
+        $.get("components/playing/playing.html", function(res){
+            $('#screen').html(res) 
+        })
+        // $('#transition').remove()
+    // }, 3900)
+// })
 
 
 
