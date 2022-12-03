@@ -3,7 +3,7 @@ import {enemy1, enemy2, enemy3} from '/components/factory.js'
 const delta = 5
 //BACKGROUND
 
-$('#background').addClass('background3')
+$('#background').addClass('background1')
 
 //PLAYERS
 

@@ -25,7 +25,7 @@ export let player = character1
         
     })
 
-// $('#next').click(()=>{
+$('#next').click(()=>{
 
     $('#screen').children().remove()
  
@@ -37,6 +37,6 @@ export let player = character1
         $('#transition').remove()
     }, 3900)
 
-
+})
 
 
