@@ -29,14 +29,13 @@ export let player = character1
 
     $('#screen').children().remove()
  
-    // $('#transition').addClass('transitionShow')
-    // setTimeout(()=>{
+    $('#transition').addClass('transitionShow')
+    setTimeout(()=>{
         $.get("components/playing/playing.html", function(res){
             $('#screen').html(res) 
         })
-        // $('#transition').remove()
-    // }, 3900)
-// })
+        $('#transition').remove()
+    }, 3900)
 
 
 
