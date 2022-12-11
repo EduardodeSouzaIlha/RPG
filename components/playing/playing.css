@@ -27,13 +27,7 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
-.background3{
-  background-image: url('/img/background2.jpg');
-  width: 600px;
-  height: 400px;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
+
 #clouds{
   position: absolute;
   width: 200px;
@@ -99,13 +93,14 @@
   width: 150px;
   bottom: -10px;
   left: 450px;
+
 }
 #attack > img{
   position: relative;
   top: -80px;
   right: -400px;
   width: 40px;
-  
+  z-index: 10;
 }
 .attack-move{
   animation: 2s attack-animation linear infinite;;
@@ -139,6 +134,7 @@
   height: 150px;
   position: relative;
   top: 180px;
+  z-index: 1;
 }
 .player-jump{
   animation: 1s jump ;
@@ -188,4 +184,18 @@ background: linear-gradient(90deg, rgb(102, 100, 100)0%, rgba(90,90,156,1) 45%, 
   width: 10px;
   margin-right: 4px ;
   margin-left: -2px ;
+}
+#end{
+  display: none;
+  right: 350px;
+  font-size: 50px;
+  position: absolute;
+  z-index: 10;
+}
+#infoDied{
+  text-align: center;
+}
+#infoDied > p{
+  color:whitesmoke;
+  margin: 4px;
 }

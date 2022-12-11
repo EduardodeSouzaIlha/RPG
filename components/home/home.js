@@ -6,7 +6,7 @@ $('span:last').click(()=>{
     })
 })
 $('span:first').click(()=>{
-       $('#menu').remove()
+       $('#menu').children().remove()
        $.get("components/game/game.html", function(res){
         $('#game').html(res) 
         })
