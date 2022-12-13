@@ -1,5 +1,5 @@
 
-import {character1, character2, character3} from '/components/factory.js'
+import {character1, character2, character3} from './../factory.js'
 
 const characters = [character1, character2, character3]
 

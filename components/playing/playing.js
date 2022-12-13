@@ -16,6 +16,28 @@ $('#player-game').prepend(user.image);
 
 setInterval(()=>{
     user.y = user.image.css("top").split("p", 2)[0]
+    if (enemy.life <= 0){
+        attack.children().removeClass('attack-move')
+        attack.children().css('display', 'none')
+        enemy.life = 0
+        if(enemy.name == "enemy2"){
+            $('#end').html("You Win").hide(2000).show(2000).fadeOut(1000).css("color","green") 
+        }
+        if(enemy.name == "enemy1"){
+            
+
+            setTimeout(()=>{
+                enemy = enemy2
+                $('#background').removeClass('background1')
+                $('#background').addClass('background2')
+                attack.children().css('display', 'block')
+                attack = $('#attack').html(enemy.power)
+                attack.children().addClass('attack-move')
+            }, 2000)
+            
+        }
+       
+    }
 }, 1)
 addEventListener('keypress', function(e){
     move(e)
@@ -35,20 +57,9 @@ function attackPlayer(){
 
             }
             
-            else if (enemy.life <= 0){
-                attack.children().removeClass('attack-move')
-                $('#end').html("You Win").hide(1000).show(1000).fadeOut(1000).css("color","green")
-                setTimeout(()=>{
-                    
-                    enemy = enemy2
-                    $('#background').removeClass('background1')
-                    $('#background').addClass('background2')
-                    attack = $('#attack').html(enemy.power)
-                    attack.children().addClass('attack-move')
-                }, 3000)
-               
-            }
+         
         }
+        
     }
         
 function setPosition(){   
@@ -103,7 +114,7 @@ function positionAttack(positionAttackX){
            $('#end').html("You died").hide(1000).show(5000).fadeOut(5000).css("color","red")
            attack.children().removeClass('attack-move')
            attack.children().css('display', 'none')
-           user.life = "died"
+           user.life = 0
         }
         else if(user.life > 0){
             
@@ -120,7 +131,7 @@ function positionAttack(positionAttackX){
             $('#end').html("You died").hide(1000).show(5000).fadeOut(5000).css("color","red")
             attack.children().removeClass('attack-move')
             attack.children().css('display', 'none')
-            user.life = "died"
+            user.life = 0
          }
         
        }
